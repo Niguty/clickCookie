@@ -26,6 +26,9 @@ class Cookie {
              img.style.height = '500%'; 
              img.style.objectFit = 'contain'; 
              img.style.borderRadius = '50%'; 
+        
+        const som = document.createElement('som'
+        )
 
         cookie.appendChild(img)
         document.body.appendChild(cookie);
