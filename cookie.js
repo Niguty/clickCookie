@@ -1,5 +1,5 @@
 class Cookie {
-    constructor(x, y, count){
+    constructor(initial){
         this.x = initial.x
         this.y = initial.y
         this.count = initial.count
@@ -17,7 +17,22 @@ class Cookie {
         this.OnPressedAnimation()
     }
 
-    OnClick(){}
-    OnPressedAnimation(){}
+    OnClick(){
+        document.body.addEventListener('mouse', (event) => {
+            
+            if(key == 'mouse tap') {this.mouseTab.left = true}
+            if(key == 'mouse tap') {this.mouseTab.right = true}
+        })
+        count = counter++
+    }
+
+
+    OnPressedAnimation(){
+        if(onPressMouse == true && count > 0){
+            cookie da um pulinho
+        } else {
+            cookie permanece parado
+        }
+    }
 
 }
