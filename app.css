@@ -10,4 +10,5 @@ html, body { margin: 0; height: 100%;}
 .cookie {
     position: absolute;
     background-color: burlywood;
+    border-radius: 50%; 
 }
