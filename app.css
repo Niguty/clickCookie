@@ -1,4 +1,4 @@
-html, body { margin: 0; height: 100%;}
+html { margin: 0; height: 100%;}
 
 .map {
     position: relative;
@@ -8,14 +8,20 @@ html, body { margin: 0; height: 100%;}
 }
 
 .cookie {
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 2);
     transition: transform 0.2s ease, box-shadow 0.2 ease;
 }
 
 .cookie:hover {
     transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(168, 247, 247);
 }
 
 #counter {

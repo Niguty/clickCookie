@@ -4,35 +4,46 @@ class Cookie {
         this.y = initial.y
         this.count = initial.count || 0
         this.element = this.createElement()
-        this.addClickListener() 
+        this.addClickListener();
     }
 
     createElement(){
         const cookie = document.createElement('div')
-        cookie.classList.add('cookie')
-        cookie.style.position = 'absolute';
-        cookie.style.left = `${this.x}px`
-        cookie.style.top = `${this.y}px`
-        cookie.style.width = '100px'
-        cookie.style.height = '100px'
-        cookie.style.background = 'url("https://img.freepik.com/psd-gratuitas/cozinhar-deliciosos-biscoitos-de-chocolate-isolados-em-fundo-transparente_191095-16881.jpg?t=st=1733414280~exp=1733417880~hmac=a5c29a9b1f44a1c93778322624cbd332ff75b7d44d7086b61778b6d3bf42da10&w=740") no-repeat center';
-        cookie.style.cursor = 'pointer'
+             cookie.classList.add('cookie')
+             cookie.style.position = 'absolute';
+             cookie.style.left = `${this.x}px`
+             cookie.style.top = `${this.y}px`
+             cookie.style.width = '100px'
+             cookie.style.height = '100px'
+             cookie.style.cursor = 'pointer'
+             cookie.style.left = `calc(40% - 60px)`;
+             cookie.style.top = `calc(15% - 1px)`;
+        
+        const img = document.createElement('img');
+             img.src = './cookie.png'; 
+             img.alt = 'Cookie';
+             img.style.width = '500%'; 
+             img.style.height = '500%'; 
+             img.style.objectFit = 'contain'; 
+             img.style.borderRadius = '50%'; 
+
+        cookie.appendChild(img)
         document.body.appendChild(cookie);
         return cookie
     }
 
-    addClickListener(){
+    addClickListener() {
         this.element.addEventListener('click', () => {
-            this.count++
+            this.count++;
             this.updateCounter();
-            console.log(`número de clicks: ${this.count}`)
-        })
+            console.log(`Número de cliques: ${this.count}`);
+        });
     }
 
-    updateCounter(){
+    updateCounter() {
         const counterElement = document.getElementById('counter');
-            if(counterElement){
-                counterElement.textContent = `Clicks: ${this.count}`
-            }
+        if (counterElement) {
+            counterElement.textContent = `Cliques: ${this.count}`;
+        }
     }
 }
