@@ -2,8 +2,9 @@ class Cookie {
     constructor(initial){
         this.x = initial.x
         this.y = initial.y
-        this.count = initial.count
-        this.element = this.createElement() 
+        this.count = initial.count || 0
+        this.element = this.createElement()
+        this.addClickListener() 
     }
 
     createElement(element){
@@ -12,27 +13,6 @@ class Cookie {
         return cookie
     }
 
-    update(){
-        this.OnClick()
-        this.OnPressedAnimation()
-    }
-
-    OnClick(){
-        document.body.addEventListener('mouse', (event) => {
-            
-            if(key == 'mouse tap') {this.mouseTab.left = true}
-            if(key == 'mouse tap') {this.mouseTab.right = true}
-        })
-        count = counter++
-    }
-
-
-    OnPressedAnimation(){
-        if(onPressMouse == true && count > 0){
-            cookie da um pulinho
-        } else {
-            cookie permanece parado
-        }
-    }
+    
 
 }
