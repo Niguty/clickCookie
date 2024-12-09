@@ -19,16 +19,17 @@ class Cookie {
              cookie.style.left = `calc(40% - 60px)`;
              cookie.style.top = `calc(15% - 1px)`;
         
-        const img = document.createElement('img');
-             img.src = './cookie.png'; 
+             const img = document.createElement('img');
+             img.src = './cookie.png';
              img.alt = 'Cookie';
-             img.style.width = '500%'; 
-             img.style.height = '500%'; 
-             img.style.objectFit = 'contain'; 
-             img.style.borderRadius = '50%'; 
-        
-        const som = document.createElement('som'
-        )
+             img.style.position = 'fixed';
+             img.style.top = '50%';
+             img.style.left = '50%';
+             img.style.transform = 'translate(-85%, -50%)';
+             img.style.maxWidth = '90vw';
+             img.style.maxHeight = '90vh';
+             img.style.objectFit = 'contain';
+             img.style.borderRadius = '50%';  
 
         cookie.appendChild(img)
         document.body.appendChild(cookie);
