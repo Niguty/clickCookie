@@ -1,23 +1,26 @@
 html { margin: 0; height: 100%;}
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: repeating-conic-gradient(
+        from -5deg at 45% 50%, 
+         #0000 0 10deg,
+         #fff3 0 20deg
+         ), #acf;
+    overflow: hidden;
+}
+
 .map {
+    position: relative;
     width: 100%;
     height: 100%;
 }
 
 .cookie:active{
     transform: translateY(4px);
-}
-
-body {
-    overflow: hidden;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #0000;
-    background: repeating-conic-gradient(from -5deg at 45% 50%, #0000 0 10deg, #fff3 0 20deg), #acf;
 }
 
 #counter {

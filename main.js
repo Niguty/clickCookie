@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML += '<div id="counter">Cliques: 0</div>';
+    document.body.innerHTML += '<div id="counter">Clicks: 0</div>';
 
     const cookie = new Cookie({
         x: window.innerWidth / 2 - 50, 
